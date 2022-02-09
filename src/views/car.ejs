@@ -1,5 +1,5 @@
 <% const coupons = require('@/coupons.json'); %>
-<% const title = 'Каталог' %>
+<% const title = 'Авто' %>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -10,6 +10,6 @@
 <body>
   <%- require('@/components/AppHeader.ejs')({ title }) %>
   <%- require('@/components/AppContent.ejs')({ coupons }) %>
-  <%- require('@/components/AppSidebar.ejs')({ pageId: 'catalog' }) %>
+  <%- require('@/components/AppSidebar.ejs')({ pageId: 'car' }) %>
 </body>
 </html>

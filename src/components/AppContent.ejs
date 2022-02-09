@@ -1,0 +1,5 @@
+<main id="content" class="open">
+  <% coupons.forEach(coupon => { %>
+    <%- require('@/components/Coupon.ejs')(coupon) %>
+  <% }); %>
+</main>

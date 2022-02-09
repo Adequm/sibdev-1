@@ -1,5 +1,46 @@
 @import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@import "./header.scss";
+@import "./content.scss";
+@import "./sidebar.scss";
 
 body {
-  background: #222;
+  background: #fafafa;
+  transition: padding .2s;
+  display: grid;
+
+  // padding-top: 201px;
+  img.icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: brightness(0);
+  }
+}
+
+@media screen and (min-width: 320px) and (orientation: portrait) {
+  body {
+    &.sidebar-open { padding-left: 192px !important; }
+    &:not(.sidebar-open) { padding-left: 12px !important; }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    &.sidebar-open { padding-left: 240px; }
+    &:not(.sidebar-open) { padding-left: 104px; }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    &.sidebar-open, &:not(.sidebar-open) {
+      padding-left: 240px;
+    }
+  }
 }

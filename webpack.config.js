@@ -2,6 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -19,7 +20,7 @@ module.exports = {
   resolve: {
     alias: {
       core: path.resolve(__dirname, 'core'),
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src')
     }
   },
   devServer: {
@@ -36,7 +37,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[id].[contenthash].css',
     }),
-    ...['index', 'about'].map(page => {
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: path.resolve(__dirname, 'src/assets'),
+        to: path.resolve(__dirname, 'docs/assets')
+      }],
+    }),
+    ...['index', 'health', 'beauty', 'enjoy', 'car'].map(page => {
       return new HTMLWebpackPlugin({
         filename: `${ page }.html`,
         template: `!!ejs-compiled-loader!src/views/${ page }.ejs`,
@@ -69,17 +76,9 @@ module.exports = {
       },
       {
         test: /\.ejs$/,
-        // use: {
-        //   loader: "ejs-webpack-loader",
-        //   options: {
-        //     data: { title: 'http://localhost:3000/' },
-        //     htmlmin: true
-        //   }
-        // }
         use: {
           loader: 'ejs-compiled-loader',
           options: {
-            data: { title: 'http://localhost:3000/' },
             htmlmin: !isProd,
             htmlminOptions: {
               removeComments: !isProd

@@ -1,0 +1,86 @@
+[
+  { 
+    "title": "Пробка на мира",
+    "description": "Вечер для двоих",
+    "num": "-50%",
+    "label": "скидка",
+    "img": "coupon2.svg"
+  },
+  { 
+    "title": "Кино и немцы",
+    "description": "Бесплатный бокал пива",
+    "num": "варвар",
+    "label": "промокод",
+    "img": "coupon3.svg"
+  },
+  { 
+    "title": "Valery cakes",
+    "description": "Торт",
+    "num": "30%",
+    "label": "скидка",
+    "img": "coupon4.svg"
+  },
+  { 
+    "title": "Sushi sell",
+    "description": "Набор \"Праздник\"",
+    "num": "45%",
+    "label": "скидка",
+    "img": "coupon5.svg"
+  },
+  { 
+    "title": "Mangosteen",
+    "description": "Фрукты в подарок",
+    "num": "J130",
+    "label": "Купон",
+    "img": "coupon1.svg"
+  },
+  { 
+    "title": "Теленок табака",
+    "description": "Стейк \"Мачете\"",
+    "num": "20%",
+    "label": "Скидка",
+    "img": "coupon6.svg"
+  },
+  { 
+    "title": "Fire food",
+    "description": "Вторая шаурма в подарок",
+    "num": "Огонь",
+    "label": "Промогод",
+    "img": "coupon7.svg"
+  },
+  { 
+    "title": "Aroma Cremeria",
+    "description": "Джелато \"Пармезан\"",
+    "num": "20%",
+    "label": "Скидка",
+    "img": "coupon8.svg"
+  },
+  { 
+    "title": "Пробка на мира",
+    "description": "Вечер для двоих",
+    "num": "J130",
+    "label": "Купон",
+    "img": "coupon2.svg"
+  },
+  { 
+    "title": "Кино и немцы",
+    "description": "Бесплатный бокал пива",
+    "num": "Варвар",
+    "label": "Промокод",
+    "img": "coupon3.svg"
+  },
+  { 
+    "title": "Valery Cakes",
+    "description": "Торт",
+    "num": "30%",
+    "label": "Скидка",
+    "img": "coupon4.svg"
+  },
+  { 
+    "title": "Sushi sell",
+    "description": "Набор \"Праздник\"",
+    "num": "45%",
+    "label": "Скидка",
+    "img": "coupon5.svg"
+  }
+]

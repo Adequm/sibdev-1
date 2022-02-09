@@ -1,0 +1,36 @@
+<% const pages = [
+  { id: 'catalog', name: 'Каталог', href: './index.html' },
+  { id: 'health', name: 'Здоровье', href: './health.html' },
+  { id: 'beauty', name: 'Красота', href: './beauty.html' },
+  { id: 'enjoy', name: 'Развлечения', href: './enjoy.html' },
+  { id: 'car', name: 'Авто', href: './car.html' },
+]; %>
+
+<div id="sidebar" class="sidebar open">
+  <div class="sidebar-header">
+    <img src="./assets/logo.svg" class="sidebar-header__logo">
+    <div class="sidebar-header__name">BECO</div>
+  </div>
+
+  <div class="sidebar-burger">
+    <img src="./assets/icons/burger.svg" class="burger" onclick="switchMenu();">
+    <img src="./assets/icons/exit.svg" class="exit" onclick="switchMenu();">
+    <svg width="48" height="106" viewBox="0 0 48 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0C0 11.7415 9.99255 16.1938 20.8591 21.0356C33.809 26.8055 48 33.1285 48 53C48 72.8715 33.809 79.1945 20.8591 84.9644C9.99255 89.8062 0 94.2585 0 106V0Z" fill="#F3F4F9"/>
+    </svg>
+      
+  </div>
+
+  <nav class="sidebar-menu">
+    <ul>
+      <% pages.forEach(page => { %>
+        <li>
+          <a href="<%= page.href %>" class="<%= page.id === pageId ? 'active' : '' %>">
+            <img src="./assets/icons/<%= page.id %>.svg" class="icon">
+            <span><%= page.name %></span>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </nav>
+</div>
