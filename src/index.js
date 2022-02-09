@@ -2,10 +2,19 @@ import './styles/index.scss';
 
 
 window.switchMenu = function() {
-  // document.getElementById('sidebar').classList.toggle('open');
-  // document.getElementById('content').classList.toggle('open');
-  document.getElementsByTagName('body')[0].classList.toggle('sidebar-open');
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.toggle('sidebar-open')
 };
 
-let abc = 312
+
+document.addEventListener('scroll', () => {
+  const scroll = document.getElementsByTagName('html')[0].scrollTop;
+  const body = document.getElementsByTagName('body')[0];
+  if(scroll) {
+    body.classList.add('scroll')
+  } else {
+    body.classList.remove('scroll')
+  }
+})
+
 console.log(window)

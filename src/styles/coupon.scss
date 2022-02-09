@@ -1,3 +1,108 @@
 .coupon {
-  box-shadow: 0 0 0 1px #000;
+  // width: 347px;
+  // height: 161px;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Roboto';
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    box-shadow: 0px 2px 10px 6px rgba(0, 0, 0, .15);
+    z-index: -1;
+  }
+
+  .coupon-image::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background: #fff;
+    border-radius: 10px;
+    z-index: -1;
+    clip-path: polygon(
+      0 0, 100% 0, 100% calc(50% - 17px/2), calc(100% - 10px) 50%, 100% calc(50% + 17px/2),
+      100% 100%, 0 100%, 0 calc(50% + 17px/2), 10px 50%, 0 calc(50% - 17px/2)
+    ); 
+  }
+
+  &:hover .coupon-image {
+    background: #DF212D;
+  } 
+
+  .coupon-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    background: #f1f1f1;
+    overflow: hidden;
+    border-radius: 10px;
+    clip-path: polygon(
+      0 0, 100% 0, 100% calc(50% - 17px/2), calc(100% - 10px) 50%, 100% calc(50% + 17px/2),
+      100% 100%, 0 100%, 0 calc(50% + 17px/2), 10px 50%, 0 calc(50% - 17px/2)
+    );
+    img { 
+      float: right;
+      height: calc(100% - 2px);
+      border-radius: 10px;
+      margin: 1px;
+    }
+  }
+
+  .coupon-top {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    width: calc(100% - 40px);
+    display: grid;
+    gap: 4px;
+    z-index: 1;
+    
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #000;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 16px;
+      color: #000;
+      opacity: 0.5;
+    }
+  }
+
+  .coupon-bottom { 
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    width: calc(100% - 40px);
+    display: grid;
+    z-index: 1;
+    gap: 6px;
+    .num {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 28px;
+      color: #DF212D;
+    }
+    .label {
+      font-size: 16px;
+      line-height: 16px;   
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #000; 
+      opacity: .5;
+    }
+  }
 }

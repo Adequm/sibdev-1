@@ -10,9 +10,11 @@ body:not(.sidebar-open) .sidebar {
   background-color: #F3F4F9;
   position: fixed;
   left: 0;
+  top: 0;
   height: 100vh;
   width: 240px;
   transition: width 0.2s;
+  z-index: 20;
 
   .sidebar-header {
     display: flex;
@@ -78,113 +80,6 @@ body:not(.sidebar-open) .sidebar {
             position: absolute;
             background: #34ABE0;
           }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (orientation: portrait) {
-  body {
-    &:not(.sidebar-open) .sidebar {
-      width: 12px !important; 
-      .sidebar-header { display: none; }
-      .sidebar-menu { display: none; }
-    }
-    .sidebar {
-      width: 192px !important;
-      .sidebar-header {
-        margin: 40px;
-        &__logo {
-          width: 24px;
-          height: 24px;
-        }
-        &__name {
-          font-size: 14px;
-          line-height: 21px;
-          margin-left: 5px;
-        }
-      }
-      .sidebar-menu ul li {
-        height: 64px;
-        padding-left: 40px;
-        a.active::after {
-          left: -40px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    &:not(.sidebar-open) .sidebar {
-      width: 104px;
-      .sidebar-header {
-        margin: 40px;
-        &__name { display: none; }
-        &__logo {
-          width: 24px;
-          height: 24px;
-        }
-      }
-      .sidebar-menu {
-        ul li {
-          height: 60px;
-          a span { display: none; }
-        }
-      }
-    }
-    .sidebar {
-      width: 240px;
-      .sidebar-header {
-        margin: 40px;
-        &__logo {
-          width: 24px;
-          height: 24px;
-        }
-        &__name {
-          font-size: 14px;
-          line-height: 21px;
-          margin-left: 5px;
-        }
-      }
-      .sidebar-menu ul li {
-        height: 64px;
-        padding-left: 40px;
-        a.active::after {
-          left: -40px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  body, body:not(.sidebar-open) {
-    .sidebar {
-      width: 240px;
-      .sidebar-header {
-        margin: 41px;
-        &__logo {
-          width: 50px;
-          height: 50px;
-        }
-        &__name {
-          font-size: 16px;
-          line-height: 24px;
-          margin-left: 10px;
-        }
-      }
-      .sidebar-burger {
-        display: none;
-      }
-      .sidebar-menu ul li {
-        height: 64px;
-        padding-left: 41px;
-        a span { display: block; }
-        a.active::after {
-          left: -41px;
         }
       }
     }

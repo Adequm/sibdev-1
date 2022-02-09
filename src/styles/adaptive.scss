@@ -1,0 +1,250 @@
+$sidebar320_width_open: 192px;
+$sidebar320_width_close: 12px;
+$header320_height_noscroll: 169px;
+$header320_height_scroll: 106px;
+
+$sidebar768_width_open: 240px;
+$sidebar768_width_close: 104px;
+$header768_height_noscroll: 181px;
+$header768_height_scroll: 106px;
+
+$sidebar1440_width_open: 240px;
+$sidebar1440_width_close: 240px;
+$header1440_height_noscroll: 201px;
+$header1440_height_scroll: 201px;
+
+@media screen and (min-width: 320px) {
+  body {
+    &.sidebar-open { 
+      .sidebar {
+        width: $sidebar320_width_open;
+        .sidebar-header {
+          margin: 40px;
+          &__logo {
+            width: 24px;
+            height: 24px;
+          }
+          &__name {
+            font-size: 14px;
+            line-height: 21px;
+            margin-left: 5px;
+          }
+        }
+        .sidebar-menu ul li {
+          height: 64px;
+          padding-left: 40px;
+          a img { display: none; }
+          a.active::after {
+            left: -40px;
+          }
+        }
+      }
+    }
+    &:not(.sidebar-open) {
+      .sidebar {
+        width: $sidebar320_width_close; 
+        .sidebar-header { display: none; }
+        .sidebar-menu { display: none; }
+      }
+    }
+    &.sidebar-open, &:not(.sidebar-open) {
+      padding-top: $header320_height_noscroll; 
+      padding-left: $sidebar320_width_close;
+      header {
+        transition: width 0s;
+        width: calc(100% - 41px - 12px);
+        height: calc(#{$header320_height_noscroll} - 58px);
+        padding: 31px 20px 27px 21px;
+        h1 { 
+          text-align: end;
+          font-size: 24px;
+          margin-bottom: 21px;
+          line-height: 32px;
+        }
+      }
+    }
+    &.scroll {
+      &.sidebar-open, &:not(.sidebar-open) {
+        padding-top: $header320_height_scroll; 
+        header {
+          height: calc(#{$header320_height_scroll} - 54px);
+          width: calc(100% - calc(48px + 20px) - 20px - #{$sidebar320_width_close});
+          padding: 27px 20px 27px calc(48px + 20px);
+          h1 { display: none }
+        }
+      }
+    }
+    main {
+      grid-template-columns: repeat(auto-fill, 268px);
+      gap: 15px;
+      padding: 20px 27px;
+      .coupon {
+        width: 268px;
+        height: 130px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    &.sidebar-open {
+      padding-left: $sidebar768_width_open; 
+      header {
+        width: calc(100% - 54px - #{$sidebar768_width_open});
+      }
+      .sidebar {
+        width: $sidebar768_width_open;
+        .sidebar-header {
+          margin: 40px;
+          &__logo {
+            width: 24px;
+            height: 24px;
+          }
+          &__name {
+            font-size: 14px;
+            line-height: 21px;
+            margin-left: 5px;
+          }
+        }
+        .sidebar-menu ul li {
+          height: 64px;
+          padding-left: 40px;
+          a img { display: block; }
+          a.active::after {
+            left: -40px;
+          }
+        }
+      }
+    }
+    &:not(.sidebar-open) { 
+      padding-left: $sidebar768_width_close; 
+      header {
+        width: calc(100% - 54px - #{$sidebar768_width_close});
+      }
+      .sidebar {
+        width: $sidebar768_width_close;
+        .sidebar-header {
+          display: flex;
+          margin: 40px;
+          &__name { display: none; }
+          &__logo {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        .sidebar-menu {
+          display: flex;
+          ul li {
+            height: 60px;
+            padding-left: 40px;
+            a span { display: none; }
+            a.active::after {
+              left: -40px;
+            }
+          }
+        }
+      }
+    }
+    &.sidebar-open, &:not(.sidebar-open) {
+      padding-top: $header768_height_noscroll; 
+      header {
+        height: calc(#{$header768_height_noscroll} - 58px);
+        padding: 31px 27px 27px 27px;
+        h1 {
+          font-size: 28px;
+          line-height: 38px;
+          margin-bottom: 31px;
+        }
+      }
+    }
+    &.scroll {
+      padding-top: $header768_height_scroll; 
+      &.sidebar-open {
+        header {
+          width: calc(100% - calc(48px + 29px) - 27px - #{$sidebar768_width_open});
+          padding: 27px 27px 27px calc(48px + 29px);
+        }
+      }
+      &:not(.sidebar-open) {
+        header {
+          width: calc(100% - calc(48px + 29px) - 27px - #{$sidebar768_width_close});
+          padding: 27px 27px 27px calc(48px + 29px);
+        }
+      }
+      &.sidebar-open, &:not(.sidebar-open) {
+        header {
+          height: calc(#{$header768_height_scroll} - 54px);
+        }
+      }
+    }
+    main {
+      grid-template-columns: repeat(auto-fill, 296px);
+      gap: 20px;
+      padding: 27px;
+      .coupon {
+        width: 296px;
+        height: 144px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    &.sidebar-open, &:not(.sidebar-open) {
+      padding-left: $sidebar1440_width_open;
+      padding-top: $header1440_height_scroll;
+      .sidebar {
+        width: $sidebar1440_width_open;
+        .sidebar-header {
+          margin: 41px;
+          &__logo {
+            width: 50px;
+            height: 50px;
+          }
+          &__name {
+            font-size: 16px;
+            line-height: 24px;
+            margin-left: 10px;
+            display: block;
+          }
+        }
+        .sidebar-burger {
+          display: none;
+        }
+        .sidebar-menu ul li {
+          height: 64px;
+          padding-left: 41px;
+          a span { display: block; }
+          a.active::after {
+            left: -41px;
+          }
+        }
+      }
+      header {
+        width: calc(100% - 120px - #{$sidebar1440_width_open});
+        height: calc(#{$header1440_height_scroll} - 80px);
+        padding: 40px 60px;
+        h1 { text-align: start; }
+      }
+      &.scroll {
+        padding-top: $header1440_height_scroll; 
+        header {
+          width: calc(100% - 120px - #{$sidebar1440_width_open});
+          height: calc(#{$header1440_height_scroll} - 80px);
+          padding: 40px 60px;
+          h1 { display: block }
+        }
+      }
+    }
+    main {
+      grid-template-columns: repeat(auto-fill, 347px);
+      padding: 40px 60px;
+      .coupon {
+        width: 347px;
+        height: 160px;
+      }
+    }
+  }
+}

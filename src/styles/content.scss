@@ -4,5 +4,6 @@ main {
   padding: 40px 60px;
   display: grid;
   grid-template-columns: repeat(3, 347px);
+  gap: 20px;
   justify-content: space-between;
 }
