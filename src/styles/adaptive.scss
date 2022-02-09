@@ -81,6 +81,16 @@ $header1440_height_scroll: 201px;
       .coupon {
         width: 268px;
         height: 130px;
+        .coupon-top {
+          gap: 0;
+          .title { font-size: 12px; }
+          .description { font-size: 12px; }
+        }
+        .coupon-bottom {
+          gap: 0;
+          .num { font-size: 28px; }
+          .label { font-size: 12px; }
+        }
       }
     }
   }
@@ -185,6 +195,16 @@ $header1440_height_scroll: 201px;
       .coupon {
         width: 296px;
         height: 144px;
+        .coupon-top {
+          gap: 4px;
+          .title { font-size: 14px; }
+          .description { font-size: 14px; }
+        }
+        .coupon-bottom {
+          gap: 3px;
+          .num { font-size: 36px; }
+          .label { font-size: 16px; }
+        }
       }
     }
   }
@@ -244,6 +264,13 @@ $header1440_height_scroll: 201px;
       .coupon {
         width: 347px;
         height: 160px;
+        .coupon-top {
+          .title { font-size: 16px; }
+          .description { font-size: 16px; }
+        }
+        .coupon-bottom {
+          gap: 3px;
+        }
       }
     }
   }
