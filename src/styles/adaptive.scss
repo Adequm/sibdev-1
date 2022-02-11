@@ -75,11 +75,11 @@ $header1440_height_scroll: 201px;
       }
     }
     main {
-      grid-template-columns: repeat(auto-fill, 268px);
+      grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
       gap: 15px;
       padding: 20px 27px;
       .coupon {
-        width: 268px;
+        // width: 268px;
         height: 130px;
         .coupon-top {
           gap: 0;
@@ -189,11 +189,11 @@ $header1440_height_scroll: 201px;
       }
     }
     main {
-      grid-template-columns: repeat(auto-fill, 296px);
+      grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
       gap: 20px;
       padding: 27px;
       .coupon {
-        width: 296px;
+        // width: 296px;
         height: 144px;
         .coupon-top {
           gap: 4px;
@@ -259,10 +259,10 @@ $header1440_height_scroll: 201px;
       }
     }
     main {
-      grid-template-columns: repeat(auto-fill, 347px);
+      grid-template-columns: repeat(auto-fill, minmax(347px, 1fr));
       padding: 40px 60px;
       .coupon {
-        width: 347px;
+        // width: 347px;
         height: 160px;
         .coupon-top {
           .title { font-size: 16px; }
